@@ -2,9 +2,20 @@
   import { onMount } from 'svelte';
   
   let isVisible = false;
+  let asciiVisible = false;
+  let asciiArt = '';
   
-  onMount(() => {
+  onMount(async () => {
     isVisible = true;
+    try {
+      const response = await fetch('/ascii.txt');
+      asciiArt = await response.text();
+      setTimeout(() => {
+        asciiVisible = true;
+      }, 500);
+    } catch (error) {
+      console.error('Error loading ASCII art:', error);
+    }
   });
 </script>
 
@@ -13,6 +24,11 @@
 </svelte:head>
 
 <main class="min-h-screen bg-black text-[#38b6ff] font-mono">
+  <!-- ASCII Art Banner -->
+  <div class="container mx-auto px-4 pt-8 text-center">
+    <pre class="ascii-art" class:visible={asciiVisible}>{asciiArt}</pre>
+  </div>
+
   <!-- Hero Section -->
   <section class="container mx-auto px-4 py-20 text-center">
     <div class="border-2 border-[#38b6ff] p-8 rounded-lg">
@@ -92,5 +108,41 @@
 
   :global(a:hover) {
     text-decoration: none;
+  }
+
+  .ascii-art {
+    color: #38b6ff;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    white-space: pre;
+    overflow-x: auto;
+    background: linear-gradient(90deg, #38b6ff, #ff5757, #38b6ff);
+    background-size: 200% 100%;
+    animation: gradient-move 16s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .ascii-art.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes gradient-move {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ascii-art {
+      font-size: 0.5rem;
+    }
   }
 </style>
