@@ -24,9 +24,20 @@
 </svelte:head>
 
 <main class="min-h-screen bg-black text-[#38b6ff] font-mono">
-  <!-- ASCII Art Banner -->
-  <div class="container mx-auto px-4 pt-8 text-center">
-    <pre class="ascii-art" class:visible={asciiVisible}>{asciiArt}</pre>
+  <!-- Text and GitHub Link Overlapping ASCII Art -->
+  <div class="container mx-auto px-4 pt-8 text-center relative">
+    <div class="absolute right-0 top-0 text-right pr-4 pt-8" style="z-index: 10;">
+      <a href="https://github.com/paolordls" target="_blank" class="text-[#38b6ff]">
+        <h1 class="text-lg font-bold mb-1">a project</h1>
+        <h1 class="text-lg font-bold">by <span class="text-[#ff5757]">paolordls</span></h1>
+      </a>
+    </div>
+    <div class="absolute left-0 top-0 text-left pl-4 pt-8" style="z-index: 10;">
+      <h1 class="text-6xl font-bold text-[#38b6ff] mb-2">AI is</h1>
+      <h1 class="text-6xl font-bold text-[#38b6ff] mb-2">always</h1>
+      <h1 class="text-6xl font-bold text-[#ff5757]">biased.</h1>
+    </div>
+    <pre class="ascii-art" class:visible={asciiVisible} style="z-index: 1;">{asciiArt}</pre>
   </div>
 
   <!-- Hero Section -->
@@ -55,22 +66,32 @@
   <!-- Key Points Section -->
   <section id="learn-more" class="container mx-auto px-4 py-20">
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors">
-        <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> Beyond Performance</h3>
+      <a href="/news" class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors relative block">
+        <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> Why Should You Care?</h3>
         <p class="text-[#38b6ff]">
-          Speed, cost, and accuracy are important, but they're not the whole story. Discover why ideological alignment matters in AI development.
+          AI isn't just about speed and accuracy. It's about aligning with values that matter. Dive into why this matters.
         </p>
+        <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#38b6ff" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
+      <div class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors relative">
+        <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> What the Experts Say</h3>
+        <p class="text-[#38b6ff]">
+          Uncover the hidden biases in AI systems as revealed by leading research. Know what you're dealing with.
+        </p>
+        <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#38b6ff" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
       </div>
       <div class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors">
-        <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> Hidden Biases</h3>
+        <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> Your Role as a Developer</h3>
         <p class="text-[#38b6ff]">
-          Every AI system carries the values and biases of its creators. Learn how to identify and evaluate these hidden influences.
-        </p>
-      </div>
-      <div class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors">
-        <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> Informed Choices</h3>
-        <p class="text-[#38b6ff]">
-          Make conscious decisions about which AI systems to use based on their underlying values and principles.
+          As a developer, your choices shape the future. Make informed decisions that reflect your principles.
         </p>
       </div>
     </div>
