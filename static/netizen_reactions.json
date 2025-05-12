@@ -1,0 +1,87 @@
+[
+  {
+    "profile_pic": "https://example.com/profiles/juan.jpg",
+    "name": "Juan Dela Cruz",
+    "comment": "Parang delikado ang mga chatbots na ito, we should study them more. Hindi mo ba nakikita ang risk, @Maria?",
+    "in_reply_to": "Voter Info Chatbots Powered by Chinese AI Tilt Philippine Elections",
+    "hearts": 120
+  },
+  {
+    "profile_pic": "https://example.com/profiles/maria.jpg",
+    "name": "Maria Clara",
+    "comment": "Ano kaya ang impact nito sa voters? @Juan, overreacting ka lang. Hindi naman lahat ng AI masama.",
+    "in_reply_to": "Voter Info Chatbots Powered by Chinese AI Tilt Philippine Elections",
+    "hearts": 95
+  },
+  {
+    "profile_pic": "https://example.com/profiles/pedro.jpg",
+    "name": "Pedro Penduko",
+    "comment": "Mukhang biased ang mga chatbots. @Maria, tama si Juan. Dapat maging cautious tayo.",
+    "in_reply_to": "Voter Info Chatbots Powered by Chinese AI Tilt Philippine Elections",
+    "hearts": 150
+  },
+  {
+    "profile_pic": "https://example.com/profiles/rosa.jpg",
+    "name": "Rosa Rosal",
+    "comment": "We should focus more on AI transparency. @Pedro, agree ako pero hindi lahat ng AI biased.",
+    "in_reply_to": "Voter Info Chatbots Powered by Chinese AI Tilt Philippine Elections",
+    "hearts": 110
+  },
+  {
+    "profile_pic": "https://example.com/profiles/andres.jpg",
+    "name": "Andres Bonifacio",
+    "comment": "Kailangan ng thorough research sa paggamit ng AI sa elections. @Rosa, hindi ba obvious na may problema?",
+    "in_reply_to": "Voter Info Chatbots Powered by Chinese AI Tilt Philippine Elections",
+    "hearts": 130
+  },
+  {
+    "name": "Luzviminda Santos",
+    "comment": "Nakakabahala kung paano ito makakaapekto sa elections. @Andres, hindi naman lahat ng epekto negative.",
+    "hearts": 85
+  },
+  {
+    "name": "Jose Rizal",
+    "comment": "Dapat may regulations sa paggamit ng AI sa politics. @Luzviminda, hindi ba dapat mas open tayo sa innovation?",
+    "hearts": 140
+  },
+  {
+    "name": "Emilio Aguinaldo",
+    "comment": "@Luzviminda, tama ka. We need thorough research. Pero @Jose, hindi lahat ng innovation good.",
+    "hearts": 100
+  },
+  {
+    "name": "Gabriela Silang",
+    "comment": "Ano ang magiging epekto nito sa voters? @Emilio, hindi ba dapat mas focus tayo sa education?",
+    "hearts": 90
+  },
+  {
+    "name": "Diego Silang",
+    "comment": "@Gabriela, sana hindi ito magamit sa masama. Pero @Jose, hindi ba dapat mas cautious tayo?",
+    "hearts": 115
+  },
+  {
+    "name": "Melchora Aquino",
+    "comment": "AI can do a lot, pero dapat magamit ito ng tama. @Diego, hindi ba dapat mas strict ang rules?",
+    "hearts": 105
+  },
+  {
+    "name": "Apolinario Mabini",
+    "comment": "@Jose, we need balance sa paggamit ng AI. Pero @Melchora, hindi ba dapat mas flexible tayo?",
+    "hearts": 125
+  },
+  {
+    "name": "Marcela Agoncillo",
+    "comment": "@Emilio, tama ka. Dapat responsible tayo sa paggamit ng tech. Pero @Apolinario, hindi ba dapat mas open tayo?",
+    "hearts": 95
+  },
+  {
+    "name": "Antonio Luna",
+    "comment": "@Andres, hindi naman lahat ng AI ganyan. May mga maganda rin. Pero @Marcela, hindi ba dapat mas careful tayo?",
+    "hearts": 135
+  },
+  {
+    "name": "Gregoria de Jesus",
+    "comment": "@Rosa, we should really focus sa sariling atin. Pero @Antonio, hindi ba dapat mas global ang perspective natin?",
+    "hearts": 115
+  }
+] 

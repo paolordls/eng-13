@@ -1,14 +1,28 @@
 <script>
   import { onMount } from 'svelte';
-  /** @type {{ title: string, blurb: string, image: string }[]} */
+  /** @type {{ title: string, blurb: string, image: string, expanded: boolean }[]} */
   let headlines = [];
+  /** @type {{ profile_pic: string, name: string, comment: string, in_reply_to: string, hearts: number }[]} */
+  let netizenReactions = [];
 
   onMount(async () => {
     const response = await fetch('/headlines.json');
     headlines = await response.json();
-    // Remove the featured article from the list
-    headlines = headlines.filter(h => h.title !== 'Voter Info Chatbots Powered by Chinese AI Tilt Philippine Elections');
+    // Initialize expanded state
+    headlines = headlines.map(h => ({ ...h, expanded: false }));
+
+    // Fetch netizen reactions
+    const reactionsResponse = await fetch('/netizen_reactions.json');
+    netizenReactions = await reactionsResponse.json();
   });
+
+  /**
+   * Toggle the expanded state of an article.
+   * @param {number} index - The index of the article to toggle.
+   */
+  function toggleExpand(index) {
+    headlines = headlines.map((h, i) => ({ ...h, expanded: i === index ? !h.expanded : false }));
+  }
 </script>
 
 <svelte:head>
@@ -41,13 +55,13 @@
   <section class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="md:col-span-2">
       <div class="featured-article bg-[#1a1a1a] p-6 mb-8">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShVDvofx_SRSzNNEHf0XF6gJTypDFpxR9HUQ&s" alt="Breaking News Image" class="w-full h-64 object-cover mb-4" />
-        <h2 class="text-2xl font-bold mb-4 text-[#ff5757]">BREAKING NEWS: Voter Info Chatbots Powered by Chinese AI Tilt Philippine Elections</h2>
-        <p class="text-[#38b6ff]">Investigations reveal that over a dozen popular election help chatbots were fine-tuned on Chinese LLMs with pro-CCP leanings. These bots subtly praised populist candidates with ties to infrastructure deals with China - framing them as "practical nationalists" - while portraying opposition leaders as "destabilizers." The candidates won by narrow margins in three provinces.</p>
+        <img src="https://cdn-live.foreignaffairs.com/sites/default/files/styles/_webp_large_2x/public/public-assets/images/articles/2016/05/26/heydarian_dutertephilippines_campaigning.jpg.webp?itok=v3M8uwD9" alt="Breaking News Image" class="w-full h-64 object-cover mb-4" />
+        <h2 class="text-2xl font-bold mb-4 text-[#ff5757]">BREAKING NEWS: Pro-China Chatbots May Have Swayed Voters in Tight Senatorial Elections</h2>
+        <p class="text-[#38b6ff]">A new report by COMELEC reveals that several election help chatbots used during the 2025 polls were powered by Chinese language models that subtly boosted Beijing-friendly candidates. These bots praised infrastructure-linked bets as 'practical nationalists,' while casting critics of China as 'destabilizers.' At least three provinces swung by narrow margins.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-        {#each headlines as { title, blurb, image }, i}
-          <div class="article border-2 border-[#38b6ff] p-4 rounded hover:border-[#ff5757] transition-colors">
+        {#each headlines as { title, blurb, image, expanded }, i}
+          <div class="article {expanded ? 'expanded' : ''} border-2 border-[#38b6ff] p-4 rounded hover:border-[#ff5757] transition-colors" on:click={() => toggleExpand(i)}>
             <img src={image} alt={title} class="w-full h-48 object-cover mb-4" />
             <h3 class="text-xl font-bold mb-2 text-[#ff5757]">$> {title}</h3>
             <p class="text-[#38b6ff]">
@@ -59,14 +73,22 @@
     </div>
     <aside class="bg-[#1a1a1a] p-6">
       <h2 class="text-xl font-bold mb-4 text-[#ff5757]">Netizen Reactions</h2>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:underline">"These chatbots are just propaganda machines!" - @user1</a></li>
-        <li><a href="#" class="hover:underline">"Why is our culture being dismissed by AI?" - @user2</a></li>
-        <li><a href="#" class="hover:underline">"Is this AI or just a copy-paste from the US?" - @user3</a></li>
-        <li><a href="#" class="hover:underline">"Stop telling us how to raise our kids!" - @user4</a></li>
-        <li><a href="#" class="hover:underline">"This app is spreading hate, not education!" - @user5</a></li>
-        <li><a href="#" class="hover:underline">"Why can't it say West Philippine Sea?" - @user6</a></li>
-        <li><a href="#" class="hover:underline">"Local banks are better than this biased advice!" - @user7</a></li>
+      <ul class="space-y-4">
+        {#each netizenReactions as { name, comment, hearts }}
+          <li class="p-4 bg-[#2a2a2a] rounded-lg">
+            <div class="flex-1">
+              <div class="flex items-center space-x-2 mb-2">
+                <p class="text-[#38b6ff] font-bold">{name}</p>
+              </div>
+              <p class="text-[#38b6ff] mb-2">{comment}</p>
+              <div class="text-sm text-[#ff5757] flex justify-end items-center">
+                <span class="flex items-center">
+                  ❤️ {hearts}
+                </span>
+              </div>
+            </div>
+          </li>
+        {/each}
       </ul>
     </aside>
   </section>
@@ -128,12 +150,20 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    transition: max-height 2s ease; /* Slow expansion and de-expansion */
+    transition: max-height 2s ease; /* Apply expansion animation */
     max-height: 3em; /* Approximate height for two lines */
   }
 
-  .article:hover p {
+  .article.expanded p {
     -webkit-line-clamp: unset;
     max-height: 100em; /* Expand to show full content */
+  }
+
+  .article {
+    transition: transform 0.3s ease, max-height 0.3s ease; /* Smooth transition for deselection */
+  }
+
+  .article:not(.expanded) {
+    transform: scale(1);
   }
 </style> 

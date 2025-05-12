@@ -1,37 +1,32 @@
 [
   {
-    "title": "Voter Info Chatbots Powered by Chinese AI Tilt Philippine Elections",
-    "blurb": "Investigations reveal that over a dozen popular election help chatbots were fine-tuned on Chinese LLMs with pro-CCP leanings. These bots subtly praised populist candidates with ties to infrastructure deals with China - framing them as 'practical nationalists' - while portraying opposition leaders as 'destabilizers.' The candidates won by narrow margins in three provinces.",
-    "image": "https://cdn-live.foreignaffairs.com/sites/default/files/styles/x_large_1x/public/public-assets/images/articles/2016/05/26/heydarian_dutertephilippines_campaigning.jpg?itok=QAOHYtfi"
-  },
-  {
-    "title": "Government Health Chatbot Sparks Backlash After Calling Hilot and Herbal Remedies 'Irrational'",
-    "blurb": "A Department of Health chatbot designed to increase vaccine confidence has drawn ire after telling users that Filipino traditional medicine is 'scientifically baseless.' The LLM it uses was trained on Euro-American medical literature and Reddit, causing friction in rural areas where cultural practices play a central role in healthcare.",
+    "title": "DOH Chatbot Under Fire for Calling Hilot ‘Irrational’",
+    "blurb": "A Department of Health chatbot meant to boost vaccine trust has stirred controversy after dismissing traditional Filipino healing practices like *hilot* and herbal remedies as 'scientifically baseless.' The bot, trained mostly on Western data, has sparked backlash in rural communities where cultural health beliefs remain strong.",
     "image": "https://cdn.prod.website-files.com/62468749b0b0bc45cca404ce/6262bef37c53d54a49a59841_Filipino-Health-Hacks.jpg"
   },
   {
-    "title": "Defense Chatbot at PMA Plagiarizes US Army Doctrine, Encourages Pro-US Base Sentiment",
-    "blurb": "Cadets at a prestigious Philippine military school were shocked to discover that their tactical simulation assistant was quoting U.S. military doctrine almost verbatim - and discouraging questions about sovereignty or independent national defense. The AI was revealed to be based on GPT-4 with a plug-in linked to NATO doctrine documents.",
+    "title": "AFP AI Tool Echoes U.S. Doctrine, Discourages Sovereignty Talk — Cadets Alarmed",
+    "blurb": "Cadets at the Philippine Military Academy were surprised to find their AI tactical assistant parroting U.S. Army playbooks. The chatbot, powered by a GPT-based model linked to NATO doctrine, allegedly promoted the existence of U.S. military bases in the Philippines.",
     "image": "https://preda.org/wp-content/uploads/2023/02/001-2.jpg"
   },
   {
-    "title": "Parenting Advice Bot Causes Uproar After Labeling Filipino Parenting 'Overprotective'",
-    "blurb": "A parenting support chatbot launched by a major hospital network has been criticized after it told users to 'let children fail' and 'stop relying on extended family.' The bot's responses align with individualist parenting philosophies common in Western cultures—raising questions on AI's role in shaping child-rearing values.",
+    "title": "‘Overprotective’ Daw: DepEd Parenting AI Bot Sparks Criticism Over Western Bias",
+    "blurb": "A parenting advice bot rolled out by DepEd drew flak after telling users to 'let children fail' and 'stop relying on extended family.' Parents say the chatbot, which promotes Western-style child-rearing, ignores Filipino values around close family support and *bayanihan*-style parenting.",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB-xguSroChMePqsdfOXRYDfY2KvFg4svPLw&s"
   },
   {
-    "title": "AI Tutor App Slammed for Teaching 'Sinophobic' Cold War Narrative",
-    "blurb": "An AI-powered study app used in Filipino high schools framed modern China as a 'totalitarian state threatening democracy,' drawing complaints from educators. The app's responses skipped nuanced discussion on China's role in ASEAN and portrayed the Belt and Road Initiative as 'economic manipulation.' Critics traced the LLM's fine-tuning back to a Hong Kong-based group known for its anti-Beijing stance.",
+    "title": "‘Sinophobic’ AI Tutor Slammed for Painting China as Global Threat",
+    "blurb": "An AI study tool used in senior high schools is being questioned for presenting a heavily anti-China lens — describing the PRC as a 'totalitarian threat' and calling its global projects 'economic manipulation.' Critics say the app promotes Cold War-era thinking and skips regional nuance.",
     "image": "https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fe3e5a140-463d-11ed-abc9-d0d53e948d21.jpg?crop=1600%2C900%2C0%2C0"
   },
   {
-    "title": "Gen Z Bot Refuses to Say 'West Philippine Sea', Echoes Beijing Talking Points",
-    "blurb": "A popular Gen Z chatbot built into TikTok's Philippines app reportedly avoided using 'West Philippine Sea,' instead calling it the 'South China Sea' and describing the dispute as 'misunderstood diplomacy.' In queries about Chinese ships, it replied: 'Joint patrols are a natural step in peaceful cooperation.' Digital rights groups are calling it subtle propaganda.",
+    "title": "TikTok Chatbot Refuses to Say ‘West Philippine Sea’, Netizens Cry Propaganda",
+    "blurb": "A popular chatbot integrated into TikTok’s PH version avoids using the term 'West Philippine Sea,' instead echoing China's preferred framing. On questions about Chinese ships, it responded with: 'Joint patrols are a natural step in peaceful cooperation.' Digital rights groups warn of creeping soft power through AI.",
     "image": "https://media.philstar.com/photos/2024/09/30/6_2024-09-30_22-12-57.jpg"
   },
   {
-    "title": "DTI-Endorsed SME Bot Encourages Users to Choose 'Stable Chinese Capital' Over Local Banks",
-    "blurb": "Entrepreneurs using BizMate, an AI advisor for small businesses, reported being guided toward Chinese venture partners and suppliers. Analysts uncovered that the bot ranked PRC-based firms as 'low risk,' citing 'state backing,' while glossing over currency issues, political strings, or IP risks.",
+    "title": "DTI-Affiliated Bot Pushes Chinese Investors, Flags Local Options as Risky",
+    "blurb": "BizMate, a DTI-endorsed business chatbot, has been guiding Filipino entrepreneurs toward Chinese capital — calling it 'stable' and 'state-backed' — while giving lukewarm assessments of local banks and lenders. Critics call it a subtle nudge toward economic dependence on Beijing.",
     "image": "https://www.fransabank.com/Library/EditorImages/Bank%20Logos.jpg"
   }
-] 
+]
