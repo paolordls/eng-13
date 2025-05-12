@@ -77,7 +77,7 @@
           </svg>
         </div>
       </a>
-      <div class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors relative">
+      <a href="/theysay" class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors relative block">
         <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> What the Experts Say</h3>
         <p class="text-[#38b6ff]">
           Uncover the hidden biases in AI systems as revealed by leading research. Know what you're dealing with.
@@ -87,7 +87,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </div>
-      </div>
+      </a>
       <div class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors">
         <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> Your Role as a Developer</h3>
         <p class="text-[#38b6ff]">

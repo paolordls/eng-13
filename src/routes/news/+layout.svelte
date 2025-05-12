@@ -4,7 +4,7 @@
     <nav>
       <ul class="flex space-x-8">
         <li><a href="#" class="hover:underline font-bold">Why Care</a></li>
-        <li><a href="#" class="hover:underline">What Experts Say</a></li>
+        <li><a href="/theysay" class="hover:underline">What Experts Say</a></li>
         <li><a href="#" class="hover:underline">Your Role</a></li>
       </ul>
     </nav>
