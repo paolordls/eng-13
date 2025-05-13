@@ -44,12 +44,12 @@
   :global(h2) {
     font-size: 2em;
     margin-bottom: 0.5em;
-    color: #ff5757;
+    color: #38b6ff;
   }
   :global(h3) {
     font-size: 1.75em;
     margin-bottom: 0.5em;
-    color: #ff5757;
+    color: #38b6ff;
   }
   :global(h4) {
     font-size: 1.5em;

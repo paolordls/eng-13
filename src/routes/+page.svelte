@@ -53,7 +53,7 @@
         Ideological biases in AI systems - and why developers should consider more than just performance when choosing LLMs for their apps.
       </p>
       <div class="flex justify-center gap-4">
-        <a href="#learn-more" class="bg-[#38b6ff] hover:bg-[#ff5757] text-black px-8 py-3 rounded-none transition-colors border-2 border-[#38b6ff] hover:border-[#ff5757]">
+        <a href="/news" class="bg-[#38b6ff] hover:bg-[#ff5757] text-black px-8 py-3 rounded-none transition-colors border-2 border-[#38b6ff] hover:border-[#ff5757]">
           $> Learn More
         </a>
         <a href="#get-involved" class="bg-transparent border-2 border-[#38b6ff] text-[#38b6ff] hover:bg-[#ff5757] hover:text-black px-8 py-3 rounded-none transition-colors">
@@ -88,30 +88,44 @@
           </svg>
         </div>
       </a>
-      <div class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors">
+      <a href="/your-role" class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors relative block">
         <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> Your Role as a Developer</h3>
         <p class="text-[#38b6ff]">
           As a developer, your choices shape the future. Make informed decisions that reflect your principles.
         </p>
-      </div>
+        <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#38b6ff" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
     </div>
   </section>
 
-  <!-- Call to Action Section -->
-  <section id="get-involved" class="container mx-auto px-4 py-20 text-center">
-    <div class="max-w-3xl mx-auto border-2 border-[#38b6ff] p-8">
-      <h2 class="text-2xl font-bold mb-6 text-[#ff5757]">$> Join the Conversation</h2>
-      <p class="text-lg text-[#38b6ff] mb-8">
-        Help shape the future of AI development by considering the ethical and ideological implications of your choices.
-      </p>
-      <div class="flex justify-center gap-4">
-        <a href="#" class="bg-[#38b6ff] hover:bg-[#ff5757] text-black px-8 py-3 rounded-none transition-colors border-2 border-[#38b6ff] hover:border-[#ff5757]">
-          $> Subscribe
-        </a>
-        <a href="#" class="bg-transparent border-2 border-[#38b6ff] text-[#38b6ff] hover:bg-[#ff5757] hover:text-black px-8 py-3 rounded-none transition-colors">
-          $> Contribute
-        </a>
-      </div>
+  <section id="get-involved" class="container mx-auto px-4 py-20">
+    <div class="grid md:grid-cols-2 gap-8">
+      <a href="/full-paper" class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors">
+        <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> Read the Full Whitepaper</h3>
+        <p class="text-[#38b6ff]">
+          Dive deep into the comprehensive analysis of AI biases and their implications.
+        </p>
+        <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#38b6ff" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
+      <a href="mailto:?subject=Interesting%20Blog%20on%20AI%20Bias&body=Hey%20team,%0D%0A%0D%0AI%20came%20across%20this%20interesting%20blog%20about%20bias%20in%20AI.%20Tl;dr:%20optimize%20not%20only%20on%20capability%20but%20also%20on%20bias.%20Check%20it%20out:%20[link]" class="border-2 border-[#38b6ff] p-8 rounded-none hover:border-[#ff5757] transition-colors">
+        <h3 class="text-xl font-bold mb-4 text-[#ff5757]">$> Share to Your Colleagues</h3>
+        <p class="text-[#38b6ff]">
+          Spread the word about the importance of considering biases in AI development.
+        </p>
+        <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#38b6ff" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
     </div>
   </section>
 </main>

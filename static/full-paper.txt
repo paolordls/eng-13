@@ -1,5 +1,7 @@
 # No Such Thing as Neutral: The Hidden Stakes of Building with AI
 
+### by paolordls
+
 When DeepSeek was first released in late 2024, it was positioned as China’s answer to ChatGPT: powerful, affordable, and fast. As an AI developer, I wanted to see for myself what it could do. I asked about the West Philippine Sea and the Nine-Dash Line issue, and the chatbot claimed that China’s activities were lawful and justified - a stark contrast to the reality I knew as a Filipino familiar with China’s aggressions in the region.
 
 That moment unsettled me. It made me realize that the choice of what AI model to use affects more than just the engineering tangibles - accuracy, cost, speed. It also shapes whose version of the world we embed into the tools people trust, often without even realizing it.

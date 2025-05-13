@@ -301,18 +301,18 @@
     </div>
   </div>
 
-  <div class="cta-section" style="text-align: center; margin-top: 40px; display: flex; justify-content: center; align-items: center; gap: 20px;">
-    <div style="text-align: center;">
-      <a href="/whitepaper" class="cta-button" style="display: inline-block; padding: 10px 20px; background-color: #38b6ff; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease;">
+  <div class="cta-section" style="text-align: center; margin-top: 40px; display: flex; justify-content: center; align-items: flex-start; gap: 40px;">
+    <div style="text-align: center; width: 200px;">
+      <a href="/full-paper" class="cta-button" style="display: inline-block; width: 100%; padding: 10px 20px; background-color: #38b6ff; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease;">
         Read the Whitepaper
       </a>
-      <p style="color: #e0e0e0; margin-top: 10px;">... to understand the full argument</p>
+      <p style="color: #e0e0e0; margin-top: 10px;">to understand the full argument</p>
     </div>
-    <div style="text-align: center;">
-      <a href="#" class="cta-button" style="display: inline-block; padding: 10px 20px; background-color: #ff5757; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease;">
+    <div style="text-align: center; width: 200px;">
+      <a href="mailto:?subject=Interesting%20Blog%20on%20AI%20Bias&body=Hey%20team,%0D%0A%0D%0AI%20came%20across%20this%20interesting%20blog%20about%20bias%20in%20AI.%20Tl;dr:%20optimize%20not%20only%20on%20capability%20but%20also%20on%20bias.%20Check%20it%20out:%20[link]" class="cta-button" style="display: inline-block; width: 100%; padding: 10px 20px; background-color: #ff5757; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease;">
         Share this with your colleagues
       </a>
-      <p style="color: #e0e0e0; margin-top: 10px;">... to spread the ideas and convince your team to optimize on bias too</p>
+      <p style="color: #e0e0e0; margin-top: 10px;">to convince your team to optimize on bias</p>
     </div>
   </div>
 </main>
