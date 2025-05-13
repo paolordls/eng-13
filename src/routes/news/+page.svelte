@@ -25,23 +25,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>Developer News</title>
-</svelte:head>
-
-<header class="bg-[#38b6ff] text-black py-4">
-  <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-3xl font-bold">Developer News</h1>
-    <nav>
-      <ul class="flex space-x-4">
-        <li><a href="#" class="hover:underline">Home</a></li>
-        <li><a href="#" class="hover:underline">Technology</a></li>
-        <li><a href="#" class="hover:underline">Business</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
 <main class="min-h-screen bg-black text-[#38b6ff] font-mono">
   <section class="ticker bg-[#ff5757] text-black py-2">
     <div class="container mx-auto overflow-hidden">

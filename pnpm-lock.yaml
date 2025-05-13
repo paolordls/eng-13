@@ -11,9 +11,15 @@ importers:
       '@sveltejs/kit':
         specifier: ^2.20.8
         version: 2.20.8(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.5(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.28.2)(vite@6.3.5(jiti@2.4.2)(lightningcss@1.29.2))
+      marked:
+        specifier: ^15.0.11
+        version: 15.0.11
       svelte:
         specifier: ^5.28.2
         version: 5.28.2
+      svelte-markdown:
+        specifier: ^0.4.1
+        version: 0.4.1(svelte@5.28.2)
     devDependencies:
       '@eslint/css':
         specifier: ^0.7.0
@@ -30,6 +36,9 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.5
         version: 4.1.5(vite@6.3.5(jiti@2.4.2)(lightningcss@1.29.2))
+      '@types/marked':
+        specifier: ^6.0.0
+        version: 6.0.0
       eslint:
         specifier: ~9.25.1
         version: 9.25.1(jiti@2.4.2)
@@ -558,6 +567,13 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
+  '@types/marked@5.0.2':
+    resolution: {integrity: sha512-OucS4KMHhFzhz27KxmWg7J+kIYqyqoW5kdIEI319hqARQQUTqhao3M/F+uFnDXD0Rg72iDDZxZNxq5gvctmLlg==}
+
+  '@types/marked@6.0.0':
+    resolution: {integrity: sha512-jmjpa4BwUsmhxcfsgUit/7A9KbrC48Q0q8KvnY107ogcjGgTFDlIL3RpihNpx2Mu1hM4mdFQjoVc4O6JoGKHsA==}
+    deprecated: This is a stub types definition. marked provides its own type definitions, so you do not need this installed.
+
   '@typescript-eslint/eslint-plugin@8.32.0':
     resolution: {integrity: sha512-/jU9ettcntkBFmWUzzGgsClEi2ZFiikMX5eEQsmxIAWMOn4H3D4rvHssstmAHGVvrYnaMqdWWWg0b5M6IN/MTQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1010,6 +1026,16 @@ packages:
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
+  marked@15.0.11:
+    resolution: {integrity: sha512-1BEXAU2euRCG3xwgLVT1y0xbJEld1XOrmRJpUwRCcy7rxhSCwMrmEu9LXoPhHSCJG41V7YcQ2mjKRr5BA3ITIA==}
+    engines: {node: '>= 18'}
+    hasBin: true
+
+  marked@5.1.2:
+    resolution: {integrity: sha512-ahRPGXJpjMjwSOlBoTMZAK7ATXkli5qCPxZ21TG44rx1KEo44bii4ekgTDQPNRQ4Kh7JMb9Ub1PVk1NxRSsorg==}
+    engines: {node: '>= 16'}
+    hasBin: true
+
   mdn-data@2.20.0:
     resolution: {integrity: sha512-/d3otgvmquUkAN2RVxSg6lIbQrYX7isR4aC5Hvw8JuHvzctR3eUG50WmsAZjb9MkbJ5LbijPSy7uIxEtQDGI0w==}
 
@@ -1269,6 +1295,11 @@ packages:
     peerDependenciesMeta:
       svelte:
         optional: true
+
+  svelte-markdown@0.4.1:
+    resolution: {integrity: sha512-pOlLY6EruKJaWI9my/2bKX8PdTeP5CM0s4VMmwmC2prlOkjAf+AOmTM4wW/l19Y6WZ87YmP8+ZCJCCwBChWjYw==}
+    peerDependencies:
+      svelte: ^4.0.0
 
   svelte2tsx@0.7.37:
     resolution: {integrity: sha512-uQCWibXwUNPGQBGTZP1axIpFGFHTXXN30/ppodLVXCnX23U1nzEhqiVtFSEQjtUK3pFVxPhdnfyxD6ikxMCzPQ==}
@@ -1760,6 +1791,12 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
+  '@types/marked@5.0.2': {}
+
+  '@types/marked@6.0.0':
+    dependencies:
+      marked: 15.0.11
+
   '@typescript-eslint/eslint-plugin@8.32.0(@typescript-eslint/parser@8.32.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
@@ -2227,6 +2264,10 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
+  marked@15.0.11: {}
+
+  marked@5.1.2: {}
+
   mdn-data@2.20.0: {}
 
   merge2@1.4.1: {}
@@ -2425,6 +2466,12 @@ snapshots:
       postcss-scss: 4.0.9(postcss@8.5.3)
       postcss-selector-parser: 7.1.0
     optionalDependencies:
+      svelte: 5.28.2
+
+  svelte-markdown@0.4.1(svelte@5.28.2):
+    dependencies:
+      '@types/marked': 5.0.2
+      marked: 5.1.2
       svelte: 5.28.2
 
   svelte2tsx@0.7.37(svelte@5.28.2)(typescript@5.8.3):

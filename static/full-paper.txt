@@ -1,0 +1,152 @@
+# No Such Thing as Neutral: The Hidden Stakes of Building with AI
+
+When DeepSeek was first released in late 2024, it was positioned as China’s answer to ChatGPT: powerful, affordable, and fast. As an AI developer, I wanted to see for myself what it could do. I asked about the West Philippine Sea and the Nine-Dash Line issue, and the chatbot claimed that China’s activities were lawful and justified - a stark contrast to the reality I knew as a Filipino familiar with China’s aggressions in the region.
+
+That moment unsettled me. It made me realize that the choice of what AI model to use affects more than just the engineering tangibles - accuracy, cost, speed. It also shapes whose version of the world we embed into the tools people trust, often without even realizing it.
+
+This essay is my attempt to work through that realization - and to argue why, as developers, we need to take much more responsibility for the apps we build using models we did not train ourselves.
+
+-
+
+As artificial intelligence grows in capability and autonomy, its influence over society will not remain subtle. It will expand - shaping public opinion, manipulating information, and introducing new risks at a scale never seen before. 
+
+As Yoshua Bengio, a leading AI scientist warns, *"Increases in capabilities and autonomy may soon massively amplify AI's impact, with risks that include large-scale social harms, malicious uses, and an irreversible loss of human control over autonomous AI systems."*
+
+The question is no longer whether AI will affect society. It is whose words it will speak - and whose interests it will serve.
+
+When you scroll through social media, you can usually tell where a post is coming from - whether it is a news article, an ad, or someone’s opinion. That helps you judge whether to trust it. But with AI chatbots, things get trickier. These systems have been trained on massive amounts of text from the internet, and the choices made about what data to include or exclude affect what the chatbot “knows” and how it responds.
+
+Since we do not see how those choices are made, we might assume the chatbot is neutral, when it could be subtly pushing certain ideas or perspectives. This hidden influence could be even stronger than social media because chatbots feel like helpful, knowledgeable assistants rather than opinionated sources.
+
+But now, another question arises: Who makes these choices?
+
+The answer is not always clear. Big Tech companies and AI researchers decide what goes into these models, but their decisions are not made in the open. They choose which sources to include, which to leave out, and how to filter harmful or controversial content. These choices, whether intentional or not, shape what the AI “knows” and, in turn, what it tells us.
+
+This raises concerns about bias and control. If a chatbot is trained mostly on Western media, for example, it might reflect those cultural perspectives more than others. Conversely, AI systems developed in China may incorporate different cultural norms, leading to alternative forms of bias. If certain viewpoints are filtered out, users might never even realize they exist. And because AI companies do not always disclose their methods, the public has little say in how these invisible forces influence conversations, opinions, and even decision-making.
+
+If AI continues to shape what we see and think - like a knowledge engine that arbitrates the world’s facts (sounds familiar - Google?) - we must ask who controls the data and what biases AI inherits from its creators.
+
+## Why must we worry today?
+
+AI has been studied since the 1950s. Throughout its long history, researchers have warned that AI models do not just process information - they absorb the biases, stereotypes, and ideological leanings embedded in their training data (Bolukbasi et al., 2016).
+
+Large language models (LLMs) are AI systems designed to understand and generate human language that power the most popular AI apps like ChatGPT and Perplexity. They work by analyzing vast amounts of text data and learning patterns in how words and phrases are used. This allows them to perform tasks like question answering, summarization, translation, and even creative writing. However, because they learn from existing human-written texts, they also inherit and sometimes amplify the biases and limitations present in those sources.
+
+LLMs’ powerful language generation abilities have allowed AI apps to reach mainstream usage at breakneck speed. ChatGPT, for example, reached 1 million users in just five days and now serves an estimated 130 million users daily (Backlinko, 2023). AI-generated content is no longer a niche product; it is woven into everyday search queries, chatbots, content moderation, and automated decision-making. This level of adoption means that whatever biases exist in these models do not just stay within the system. They ripple outward, influencing millions in real time - distributed at an unprecedented scale.
+
+This trend is not confined to the West. In China, the rapid deployment of homegrown large language models like DeepSeek and ERNIE Bot reflects similar dynamics - massive models trained on vast datasets, absorbing the cultural, political, and ideological biases embedded in their source material. Whether an AI system is built in Silicon Valley or Beijing, the scale of today’s models means that the biases they inherit are not local artifacts. They are global forces, shaping information flows, social norms, and even political discourse across borders.
+
+At the same time, the fundamental design of LLMs has not changed much in the past five years. The real shift was not in their structure - it was in their scale. The "large" in ‘LLM’ comes, partly, from the sheer magnitude of data and computing power used to train them. As models ingest ever-larger datasets, their capabilities grow exponentially. But so does the risk: biases that were once confined to smaller systems are now amplified across massive models with knowledge on any topic imaginable.
+
+But this scale does not just magnify bias - it makes it harder to detect and even harder to fix. As models grow larger and more complex, their decision-making processes become increasingly opaque. The internal workings of an LLM trained on trillions of tokens are difficult, if not impossible, to fully interpret. This is why bias in AI is not just an issue of fairness - it is an issue of control and governance in all steps of the AI development process. If we are to mitigate these risks, we must understand how models encode bias.
+
+## How AI is built
+
+Large language models are trained in two main stages: pretraining and fine-tuning.
+
+Pretraining is the first and most data-intensive stage. The model is fed enormous amounts of text from books, news articles, websites, and social media. Its goal is simple: predict the next word in a sentence. By doing this repeatedly on billions of sentences, the model begins to recognize patterns in how language is structured. It picks up grammar, facts, and common ways people express ideas. However, because this text comes from the real world, it also contains human biases - stereotypes, misinformation, and dominant cultural narratives. These get absorbed into the model, shaping the way it "understands" language.
+
+Fine-tuning happens after pretraining and is meant to refine the model’s responses. This stage involves feeding it carefully chosen examples and using human reviewers to guide its behavior. A common method for this is reinforcement learning with human feedback (RLHF), where people rank different AI-generated responses to teach the model what is preferred. This process makes the model more useful and less likely to generate harmful content. But it also means the people doing the fine-tuning have a big say in what the model considers “acceptable” or “correct.”
+
+Bias can be introduced at many points in this process. The choice of training data determines what information the model learns, shaping which voices are amplified and which are missing. The fine-tuning stage introduces another layer of influence, as the people guiding the model's behavior bring in their own cultural perspectives. At the scale of today’s AI, even small biases in the data or training process can be magnified, influencing responses across millions of interactions.
+
+As Sun et al. (2025) point out, imbalances in social discourse - where certain groups dominate public narratives - mean that their stereotypes and worldviews can be disseminated into training data. These narratives are passed down through media, literature, and music, and ultimately absorbed by LLMs, perpetuating existing societal biases.
+
+In simpler terms, training an LLM is like raising a child. In pretraining, the model, like a child, soaks up everything around it - both knowledge and societal biases - without filtering. Fine-tuning is like formal schooling, shaping how it speaks and responds. But just as early experiences leave a lasting imprint on a child’s worldview, research has found that AI retains much of what it first learned, making it nearly impossible to fully erase biases, even with targeted adjustments (Raza et al., 2023).
+
+## Who builds and controls the AI?
+
+OpenAI, the Silicon Valley startup behind ChatGPT, has been training LLMs since 2015. One of its most influential models, GPT-3, was released in 2020 as a pioneering AI capable of generating human-like text. 
+
+While OpenAI has not publicly disclosed details about the training data for its latest models, such as GPT-4o, we can gain insight into their methods by examining the GPT-3 model card - a document that outlines the dataset composition, known limitations, and biases of the model. If GPT-4o and future versions followed similar training processes, they likely inherited the same structural challenges regarding bias, dataset representativeness, and interpretability.
+
+GPT-3’s model card reveals that it was trained on datasets like CommonCrawl, WebText, internet book corpora, and English Wikipedia. These sources were obtained from the internet, and hence overwhelmingly reflect the perspectives of internet-connected, Western, wealthier, and male-dominated populations, reinforcing certain biases. OpenAI acknowledged these issues, noting that the model's outputs mirror the data it was trained on and that its biases could be deeply embedded at the architectural level (OpenAI, 2020).
+
+An illustrative example of how data provenance shapes AI behavior is DeepSeek, a Chinese AI startup. DeepSeek employed a method called distillation learning, where a model is trained to imitate the outputs of another, more advanced model - in this case, reportedly OpenAI’s ChatGPT. By doing so, DeepSeek was able to shortcut the costly pretraining process and produce a highly capable chatbot at a fraction of the typical expense.
+
+However, this approach also raises important concerns: if DeepSeek learned by mimicking ChatGPT, it likely inherited not only its capabilities but also the biases embedded in ChatGPT’s responses - biases shaped by predominantly Western internet data. In other words, even models trained and deployed outside of the West can carry Western cultural assumptions, stereotypes, and gaps in knowledge, simply because of the hidden provenance of the information they replicate. 
+
+And yet DeepSeek refuses to critique Xi Jinping, reference Tiananmen Square, or admit wrongdoing in the West Philippine Sea.
+
+This is not mere coincidence. China has a track record of punishing AI developers who fail to implement censorship safeguards (Taiwan News, 2023), and DeepSeek is no exception. In fact, China’s AI policy requires developers to train their AI models to “uphold Core Socialist Values,” and to provide information that is “true and accurate” (China Law Translate, 2023).
+
+Research suggests that these restrictions were not baked into the model during pretraining but were applied later through fine-tuning. A deep technical analysis found that DeepSeek's censorship mechanisms are embedded at the model level, meaning it was not just the chatbot app filtering. DeepSeek, the model itself, was explicitly trained to avoid sensitive topics (Rannaberg, 2024).
+
+Think of it like telling a child to keep a secret. They might obey most of the time, but with the right push - say, a cleverly worded question or some external influence - they might slip up. That is exactly what happened when Rannaberg bypassed DeepSeek’s censorship guardrails, revealing that under the hood, it had the knowledge all along.
+
+This tells us three things: (1) that DeepSeek likely trained on Western datasets, at least in part, and (2) that the actors who dictate what models can and cannot say are not just the researchers - it is also powerful states with a marked interest to maintain their sociopolitical and cultural influence. But (3) the provenance of DeepSeek’s training data makes it harder to assume that national control over AI training fully eliminates foreign influence at the level of ideas, norms, and values.
+
+## Yes, but so what?
+
+Not everyone sees bias in AI as an existential threat. Reid Hoffman, who co-founded LinkedIn and invests heavily in AI, argued in an interview with Vanity Fair (Skolnik, 2025) that these systems mostly reflect the broader societal biases we already have. He is cautious about overregulation - his concern is that if we clamp down too hard, we might end up slowing the very innovation we need to make AI safer and more useful. In his words, “There are dramatics on both sides”. In spirit, it serves as a reminder to stay clear-eyed: that maybe AI is not all doom or all hype.
+
+There is also a more optimistic take from Professor Christopher Summerfield, who works at both Oxford and Google DeepMind. He points out that while current AI models can shape opinions, they still lack real contextual understanding. They are more like “knowledge engines” - what you get from them depends a lot on what you put in. That means improving their training data and incentives could go a long way (Machell, 2025).
+
+Together, these views push back on the idea that bias makes AI inherently untrustworthy. Yes, we should be vigilant. But if we only fixate on the risks, we might miss chances to actually improve these systems and use them for good.
+
+On the other hand, Steven Feldstein, in The Consequences of Generative AI for Democracy, Governance, and War (2023), warns that as LLMs become central to how people access and interpret information, they risk consolidating immense political power in the hands of a few unaccountable entities. These models do not just retrieve information. They mediate it, subtly shaping what users see, how they understand issues, and ultimately, how they engage politically.
+
+We explored how AI companies, sometimes under pressure from states, curate datasets, filter content, and decide what gets included or excluded - often behind closed doors. This lack of transparency means that when an LLM delivers politically charged responses, users have no way of knowing whether those answers are the result of unbiased knowledge or deliberate influence. Feldstein highlights this danger. LLMs do not just provide information; they arbitrate it, functioning as a new kind of knowledge engine - one with immense power over public perception.
+
+—
+
+If Google once shaped how people searched for and found information, AI now goes further - generating it, repackaging knowledge in ways that echo both the data it was trained on and the values of its creators. That opens up real concerns: If AI companies, under pressure from governments or driven by commercial incentives, get to define the boundaries of political speech, what does that mean for democracy? 
+
+At the same time, if people increasingly turn to AI for answers, often without knowing where those answers came from, it becomes harder to trace whose voice is actually shaping the narrative. Still, some argue this is not an existential shift - just an extension of long-standing issues in media and tech. The difference is scale and speed. And that makes it even more urgent to ask: who gets to design these systems, and who holds them accountable?
+
+## The role developers play
+
+We have established that bias is not an abstract concept. It enters real products the moment we integrate AI into apps. Once embedded, it becomes concretized. It becomes part of what users consume, part of what they use to make decisions, part of what they propagate into the world.
+
+In this way, a developer’s choice of model is also a choice of worldview. Yet developers often tunnel-vision into optimizing for accuracy, speed, and cost - because these are the metrics that move products forward. But behind these capabilities are real, material biases embedded deep in the data that shaped the model. They do not disappear just because the model performs well.
+
+This is why data provenance matters. As developers, we must understand where a model’s data was sourced, how it was filtered, and in what manner it was fine-tuned. We do not get to audit the insides of these systems. Modern LLMs are black boxes; we cannot fully interpret their inner workings. But understanding the model’s training pipeline - the books, the websites, the cultural norms embedded in its pretraining and tuning - is the closest thing we have to understanding what the model will prioritize, omit, or misrepresent. We are parents of our AI child asking ourselves: “Where did we go wrong?”
+
+DeepSeek is an excellent example of how this post-mortem knowledge can inform our choices. DeepSeek is a special case: a Chinese company training their models by mimicking OpenAI’s outputs. Although distillation is an industry standard, no major American or European model has been reported to be distilled from a Chinese model. The flow of influence is not symmetrical, and we do not yet know what the full effects of this cross-cultural training will be. But it is a gap worth studying - and one that I enjoin AI safety researchers to explore further.
+
+But to bring this back to the end-user of the apps we design & build: Our end-users cannot see any of this. When they interact with our AI apps, they are not thinking about training data, model provenance, or fine-tuning objectives. They trust the surface. They trust the outputs. And by extension, they trust us - the developers - to have made responsible, informed choices about the AI systems we integrate.
+
+This is why I argue: Models are more than capability. A developer’s choice of model cannot be based on accuracy, speed, and cost alone. It must also account for intangible risks: bias, worldview, historical erasure, misinformation potential.
+
+Developers must understand a model’s history and provenance, not just its performance benchmarks. They must apply contextual judgment to match the model to the app’s mission, building in safeguards, and designing appropriate guardrails to protect users.
+
+The fact is, accountability cannot be outsourced. If you build on a model, you are responsible for what it says. Pretending otherwise creates a dangerous vacuum where no one is accountable for harm. If you deploy a medical chatbot - and because of the training data, it gives advice optimized for men and marginalizes women - you have participated in systemic healthcare inequity. If you release a Study Notes app summarizing history textbooks - and because you used a DeepSeek model, it quietly erases the West Philippine Sea disputes - you have contributed to censorship and historical revisionism.
+
+The bias moves from theoretical to operational. It embeds itself in the systems we build, the knowledge we distribute, the trust we shape. As a developer myself, the implications terrify me.
+
+We cannot pretend we are neutral just because we did not pretrain the model ourselves. The responsibility begins the moment we choose which models to build on. We inherit their strengths - but we also inherit their biases, their omissions, their blind spots. And our users will never see those choices. They will only see the outputs, and they will trust them.
+
+This is why optimization must change. Speed, cost, and accuracy are no longer enough. We have to factor the intangibles - bias, provenance, ideological slant - into the calculus. Choosing a model is not just a technical decision. It is a values decision. 
+
+Bias in AI models isn't just a problem to "fix" - it's an unavoidable reality to manage. There is no such thing as a truly neutral model. Every dataset, every training choice, every fine-tuning step reflects a point of view, whether it admits it or not. Pretending we can eliminate bias entirely is itself a dangerous illusion - one that risks hiding biases deeper instead of surfacing and confronting them.
+
+The real responsibility of developers is not to "debias" AI into some imaginary neutrality, but to make the biases visible - to choose them intentionally, to align them consciously with the values the application stands for, and to equip users to understand them. And that demands asking: Whose words does it speak? Whose interests does it serve? 
+
+If we want to build AI systems that serve people rather than obscure them, then we must be deliberate about the biases we inherit, the biases we choose, and the biases we refuse.
+
+## References
+Backlinko. (2023). ChatGPT statistics: Users, growth trends, and revenue. Retrieved from https://backlinko.com/chatgpt-stats
+
+Bolukbasi, T., Chang, K. W., Zou, J. Y., Saligrama, V., & Kalai, A. T. (2016). Man is to computer programmer as woman is to homemaker? Debiasing word embeddings. Advances in Neural Information Processing Systems, 29, 4349-4357.
+
+China Law Translate. (2023, July 13). Comparison chart of current vs. draft rules for generative AI. China Law Translate. Retrieved from https://www.chinalawtranslate.com/en/comparison-chart-of-current-vs-draft-rules-for-generative-ai/
+
+Feldstein, S. (2023). The consequences of generative AI for democracy, governance and war. Survival, 65(5), 117-142. https://doi.org/10.1080/00396338.2023.2261260
+
+Machell, B. (2025, February 26). Should we fear ai? the British scientist who says don’t panic. The Times & The Sunday Times. https://www.thetimes.com/uk/technology-uk/article/should-we-fear-ai-questions-professor-christopher-summerfield-chhdzk8zg?region=global
+
+Marcus, G. (2023). Testimony before the U.S. Senate on AI regulation. Retrieved from https://garymarcus.com/senate-testimony
+
+OpenAI. (2020). GPT-3 Model Card. Retrieved from https://github.com/openai/gpt-3/blob/master/model-card.md
+
+Rannaberg, C. (2024). Deep dive into censorship of DeepSeek R1-based models. Medium. Retrieved from https://carlrannaberg.medium.com/deep-dive-into-censorship-of-deepseek-r1-based-models-17feec28c1da
+
+Raza, S., Ghassemi, M., & Szolovits, P. (2023). Retaining bias: The persistence of pretraining artifacts in language models. Journal of Machine Learning Research, 24(1), 1-25.
+
+Skolnik, J. (2025, January 27). Reid Hoffman: The Ai Revolution Will be “painful”-but worth it. Vanity Fair. https://www.vanityfair.com/news/story/reid-hoffman-ai-revolution
+
+Sun, C., Li, J., & Zhang, Y. (2025). Cultural hegemony and bias in foundation models. International Conference on Computational Linguistics, 63(1), 123-140.
+
+Taiwan News. (2023). China's ChatGPT-style bot ChatYuan suspended over questions about Xi. Retrieved from https://www.taiwannews.com.tw/news/4807319
+
+
