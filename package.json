@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@sveltejs/kit": "^2.20.8",
-    "marked": "^15.0.11",
     "svelte": "^5.28.2",
     "svelte-markdown": "^0.4.1"
   },

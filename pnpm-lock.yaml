@@ -11,9 +11,6 @@ importers:
       '@sveltejs/kit':
         specifier: ^2.20.8
         version: 2.20.8(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.5(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.28.2)(vite@6.3.5(jiti@2.4.2)(lightningcss@1.29.2))
-      marked:
-        specifier: ^15.0.11
-        version: 15.0.11
       svelte:
         specifier: ^5.28.2
         version: 5.28.2
