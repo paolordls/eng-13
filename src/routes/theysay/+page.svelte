@@ -117,12 +117,12 @@
     flex-direction: row-reverse;
   }
   .quote {
-    width: 60%;
+    width: 55%;
     text-align: left;
     margin-bottom: 20px;
   }
   .ascii-art {
-    width: 40%;
+    width: 45%;
     font-family: monospace;
     white-space: pre;
     color: transparent;

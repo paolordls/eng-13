@@ -28,8 +28,8 @@
   <div class="container mx-auto px-4 pt-8 text-center relative">
     <div class="absolute right-0 top-0 text-right pr-4 pt-8" style="z-index: 10;">
       <a href="https://github.com/paolordls" target="_blank" class="text-[#38b6ff]">
-        <h1 class="text-lg font-bold mb-1">A project</h1>
-        <h1 class="text-lg font-bold">by <span class="text-[#ff5757]">paolordls</span></h1>
+        <h2 class="text-lg font-bold mb-1">A project</h2>
+        <h2 class="text-lg font-bold">by <span class="text-[#ff5757]">paolordls</span></h2>
       </a>
     </div>
     <div class="absolute left-0 top-0 text-left pl-4 pt-8" style="z-index: 10;">
@@ -44,7 +44,7 @@
   <section class="container mx-auto px-4 py-20 text-center">
     <div class="border-2 border-[#38b6ff] p-8 rounded-lg">
       <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[#38b6ff]">
-        No Such Thing as Neutral
+        No Such Thing as Neutral AI
       </h1>
       <h2 class="text-xl md:text-2xl text-[#ff5757] mb-8">
         The Hidden Stakes of Building With AI

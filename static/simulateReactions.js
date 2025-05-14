@@ -1,8 +1,8 @@
-[
+const reactions = [
   {
     "profile_pic": "https://example.com/profiles/juan.jpg",
     "name": "Juan Dela Cruz",
-    "comment": "Parang delikado ang mga chatbots na ito, we should study them more. The risks are high.",
+    "comment": "Parang delikado ang mga chatbots na ito, we should study them more. Hindi mo ba nakikita ang risk @Maria?",
     "in_reply_to": "Voter Info Chatbots Powered by Chinese AI Tilt Philippine Elections",
     "hearts": 230
   },
@@ -59,4 +59,23 @@
     "comment": "@Gabriela, sana hindi ito magamit sa masama. Pero @Jose hindi ba dapat mas cautious tayo?",
     "hearts": 115
   }
-] 
+];
+
+function displayReaction(reaction) {
+  console.log(`Name: ${reaction.name}`);
+  console.log(`Comment: ${reaction.comment}`);
+  console.log(`Hearts: ${reaction.hearts}`);
+  console.log('---');
+}
+
+function simulateReactions() {
+  let delay = 0;
+  reactions.forEach((reaction, index) => {
+    delay += Math.floor(Math.random() * 3000) + 4000; // Random delay between 4-7 seconds
+    setTimeout(() => {
+      displayReaction(reaction);
+    }, delay);
+  });
+}
+
+simulateReactions(); 

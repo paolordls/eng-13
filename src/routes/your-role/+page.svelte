@@ -108,7 +108,7 @@
   }
   .chat-bubble {
     position: relative;
-    padding: 15px;
+    padding: 20px;
     border-radius: 15px;
     margin-bottom: 10px;
     max-width: 80%;

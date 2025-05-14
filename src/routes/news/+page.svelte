@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
   /** @type {{ title: string, blurb: string, image: string, expanded: boolean }[]} */
-  let headlines = [];
+  let headlines: { title: string; blurb: string; image: string; expanded: boolean }[] = [];
   /** @type {{ profile_pic: string, name: string, comment: string, in_reply_to: string, hearts: number }[]} */
-  let netizenReactions = [];
+  let netizenReactions: { profile_pic?: string; name: string; comment: string; in_reply_to?: string; hearts: number }[] = [];
+  let currentReactionIndex = 1;
 
   onMount(async () => {
     const response = await fetch('/headlines.json');
@@ -14,16 +16,46 @@
     // Fetch netizen reactions
     const reactionsResponse = await fetch('/netizen_reactions.json');
     netizenReactions = await reactionsResponse.json();
+    simulateReactions();
   });
 
   /**
    * Toggle the expanded state of an article.
    * @param {number} index - The index of the article to toggle.
    */
-  function toggleExpand(index) {
+  function toggleExpand(index: number) {
     headlines = headlines.map((h, i) => ({ ...h, expanded: i === index ? !h.expanded : false }));
   }
+
+  function displayReaction(reaction: { name: string; comment: string; hearts: number }) {
+    console.log(`Name: ${reaction.name}`);
+    console.log(`Comment: ${reaction.comment}`);
+    console.log(`Hearts: ${reaction.hearts}`);
+    console.log('---');
+  }
+
+  function simulateReactions() {
+    let delay = 0;
+    netizenReactions.forEach((reaction, index) => {
+      delay += Math.floor(Math.random() * 2000) + 3000; // Random delay between 4-7 seconds
+      setTimeout(() => {
+        currentReactionIndex = index + 1;
+      }, delay);
+    });
+  }
+
+  $: visibleReactions = netizenReactions.slice(0, currentReactionIndex);
 </script>
+
+<section class="bg-blue-500 text-white py-2 flex items-center justify-center" style="height: 80px;">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-2xl font-bold">DEVELOPER NEWS</div>
+    <div class="flex space-x-4 items-center">
+      <a style="color: lightgray;">This is a fictional news site.</a>
+      <a href="/theysay" class="hover:underline">Learn what experts say ></a>
+    </div>
+  </div>
+</section>
 
 <main class="min-h-screen bg-black text-[#38b6ff] font-mono">
   <section class="ticker bg-[#ff5757] text-black py-2">
@@ -57,8 +89,8 @@
     <aside class="bg-[#1a1a1a] p-6">
       <h2 class="text-xl font-bold mb-4 text-[#ff5757]">Netizen Reactions</h2>
       <ul class="space-y-4">
-        {#each netizenReactions as { name, comment, hearts }}
-          <li class="p-4 bg-[#2a2a2a] rounded-lg">
+        {#each visibleReactions as { name, comment, hearts }}
+          <li class="p-4 bg-[#2a2a2a] rounded-lg" transition:fade>
             <div class="flex-1">
               <div class="flex items-center space-x-2 mb-2">
                 <p class="text-[#38b6ff] font-bold">{name}</p>
